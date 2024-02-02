@@ -37,7 +37,7 @@ trait InteractsWithMedia
             if (is_array($params) && count($params)) {
                 $this->addMediaConversion($conversionName)
                     ->quality($params['quantity'] ?? $this->getMediaQuality())
-                    ->crop($params['crop-method'] ?? 'crop-center', $params['width'] ?? 100, $params['height'] ?? 100)
+                    ->crop($params['width'] ?? 100, $params['height'] ?? 100, $params['crop-method'] ?? 'center')
                     ->performOnCollections(...$this->getPerformOnImageCollections($params['regex_perform_to_collections'] ?? null));
             }
         }
