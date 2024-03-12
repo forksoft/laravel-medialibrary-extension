@@ -201,7 +201,7 @@ class MediaManager
      * @param string $collectionName
      * @return null|\Spatie\MediaLibrary\Models\Media
      */
-    public function saveExpand(Model $model, array $attrs, string $collectionName)
+    public function saveExpand(Model $model, array $attrs, string $collectionName): ?Media
     {
         $media = null;
 
@@ -254,7 +254,7 @@ class MediaManager
             ? $this->comparisonBooleanValue($attrs['is_main'])
             : false;
         $userId = isset($attrs['user_id'])
-            ? intval($attrs['user_id'])
+            ? (int)$attrs['user_id']
             : $this->userId;
 
         if ($isMain && ($model = $media->model)) {
