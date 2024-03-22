@@ -227,11 +227,11 @@ trait InteractsWithMedia
      * @param null $user
      * @return mixed
      */
-    public function mediaManageRefresh(array $data, $user = null)
+    public function mediaManageRefresh(array $data, $user = null, string $disk = '')
     {
         $manager = app(MediaManager::class);
 
-        return $manager->manageRefresh($this, $data, $user);
+        return $manager->manageRefresh($this, $data, $user, $disk);
     }
 
     /**
