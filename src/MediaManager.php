@@ -48,7 +48,7 @@ class MediaManager
      * @param array $data
      * @param null $user
      */
-    public function manageRefresh(Model $model, array $data, $user = null)
+    public function manageRefresh(Model $model, array $data, $user = null, string $disk = '')
     {
         if ($user && config('media-library-extension.use_auth_user')) {
             $this->userId = $user->id;
