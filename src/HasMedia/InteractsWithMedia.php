@@ -239,11 +239,11 @@ trait InteractsWithMedia
      * @param string $collectionName
      * @return mixed
      */
-    public function mediaSaveExpand(array $attrs, string $collectionName)
+    public function mediaSaveExpand(array $attrs, string $collectionName, string $disk = '')
     {
         $manager = app(MediaManager::class);
 
-        return $manager->saveExpand($this, $attrs, $collectionName);
+        return $manager->saveExpand($this, $attrs, $collectionName, $disk);
     }
 
     /**
