@@ -201,7 +201,7 @@ class MediaManager
      * @param string $collectionName
      * @return null|\Spatie\MediaLibrary\Models\Media
      */
-    public function saveExpand(Model $model, array $attrs, string $collectionName): ?Media
+    public function saveExpand(Model $model, array $attrs, string $collectionName, string $disk = ''): ?Media
     {
         $media = null;
 
