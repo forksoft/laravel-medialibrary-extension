@@ -14,7 +14,15 @@ return [
      |  Make conversions for all medias
      | ----------------------------------------------------------------
      */
-    'default_conversions' => [],
+    'default_conversions' => [
+        'thumb' => [
+            'quantity' => 75,
+            'crop-method' => Spatie\Image\Enums\CropPosition::Center,
+            'width' => 100,
+            'height' => 100,
+            'regex_perform_to_collections' => '/img|image|photo|gallery|scr|avatar/i',
+        ],
+    ],
     
     'field_suffixes' => [
         'weight' => '_weight',   // request('YOUR_COLLECTION_NAME_weight')
